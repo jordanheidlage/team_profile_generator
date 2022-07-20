@@ -1,10 +1,12 @@
 const inquirer = require("inquirer")
 const fs = require("fs")
-const Manager = require("./develop/lib/Manager")
-// please import Engineer and Intern libraries
+const Manager = require("./lib/Manager")
+const Engineer = require("./lib/Engineer")
+const Intern = require("./lib/Intern")
+
 
 const generateHTML = require("./src/generateHTML")
-const manageCard = require("./src/managerHtml")
+
 //import engineer and intern cards same as manager card above
 
 // you must create engineer and intern questions separately
@@ -52,7 +54,29 @@ const engineerQuestions = [
     {
         type: "input",
         message: "What is the engineer's github?",
-        name: "engineerrOfficeNumber"
+        name: "engineerGithub"
+    },
+]
+const internQuestions = [
+    {
+        type: "input",
+        message: "What is the intern's name?",
+        name: "internName"
+    },
+    {
+        type: "input",
+        message: "What is the intern's id?",
+        name: "internId"
+    },
+    {
+        type: "input",
+        message: "What is the intern's email?",
+        name: "internEmail"
+    },
+    {
+        type: "input",
+        message: "What is the intern's school?",
+        name: "internSchool"
     },
 ]
 
@@ -124,21 +148,8 @@ function addIntern() {
 }
 
 function createHTML() {
-    console.log(employeeArray)
-
-    let cards = ""
-
-    for (let i = 0; i < employeeArray.length; i++) {
-        if (employeeArray[i].getRole() === "Manager") {
-            cards = cards + manageCard(employeeArray[i])
-        }
-        else if (employeeArray[i].getRole() === "Engineer") {
-            //same as manager card but for Enineer card
-        } else {
-            //same as manager card but for  intern card
-        }
-    }
-    fs.writeFileSync("./dist/team.html", generateHTML(cards))
+ 
+    fs.writeFileSync("./dist/team.html", generateHTML(employeeArray), 'utf-8')
 
 }
 
