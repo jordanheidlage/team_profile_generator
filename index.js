@@ -54,7 +54,7 @@ const engineerQuestions = [
     {
         type: "input",
         message: "What is the engineer's github?",
-        name: "engineerGithub"
+        name: "engineerOfficeNumber"
     },
 ]
 const internQuestions = [
@@ -75,7 +75,7 @@ const internQuestions = [
     },
     {
         type: "input",
-        message: "What is the intern's school?",
+        message: "What is the intern's School?",
         name: "internSchool"
     },
 ]
@@ -100,7 +100,7 @@ function init() {
 function confirmNext() {
     inquirer.prompt([{
         type: "confirm",
-        message: "Do you want to add more employee?",
+        message: "Do you want to add more employees?",
         name: "addMore"
     }])
         .then(response => {
@@ -143,11 +143,16 @@ function addEngineer() {
 function addIntern() {
     //ask questions about intern using inquirer
     // create new instance intern and add it to the employeeArray using push
+    inquirer.prompt(internQuestions)
+        .then(response => {
 
     confirmNext()
+
+        })
 }
 
 function createHTML() {
+
  
     fs.writeFileSync("./dist/team.html", generateHTML(employeeArray), 'utf-8')
 
