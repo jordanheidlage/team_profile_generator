@@ -20,7 +20,7 @@ function buildTeamHtml(team) {
     return `<div class="col-sm-4 my-3">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Manger</h5>
+          <h5 class="card-title">Engineer</h5>
           <ul class="list-group">
             <li class="list-group-item">name: ${engineer.getName()}</li>
             <li class="list-group-item">id:  ${engineer.getId()}</li>
@@ -36,7 +36,7 @@ function buildTeamHtml(team) {
     return `<div class="col-sm-4 my-3">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Manger</h5>
+          <h5 class="card-title">Intern</h5>
           <ul class="list-group">
             <li class="list-group-item">name: ${intern.getName()}</li>
             <li class="list-group-item">id:  ${intern.getId()}</li>
