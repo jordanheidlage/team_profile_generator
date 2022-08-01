@@ -2,7 +2,7 @@
 
 ## Description
 
-This application will allow the user to generate an HTML web page of their team based on node input.
+This application allows the user to generate a website to display profiles for each of the employees on their team.
 
 ## Table of Contents
 
