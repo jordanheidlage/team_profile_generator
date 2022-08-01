@@ -54,7 +54,7 @@ const engineerQuestions = [
     {
         type: "input",
         message: "What is the engineer's github?",
-        name: "engineerOfficeNumber"
+        name: "engineerGithub"
     },
 ]
 const internQuestions = [
@@ -134,7 +134,8 @@ function addEngineer() {
     inquirer.prompt(engineerQuestions)
         .then(response => {
             // create new instance engineer and add it to the employeeArray using push
-
+        const engineer = new Engineer (response.engineerName, response.engineerId, response.engineerEmail, response.engineerGithub)
+        employeeArray.push (engineer)
             confirmNext()
 
         })
@@ -145,7 +146,8 @@ function addIntern() {
     // create new instance intern and add it to the employeeArray using push
     inquirer.prompt(internQuestions)
         .then(response => {
-
+            const intern = new Intern (response.internName, response.internId, response.internEmail, response.internSchool)
+            employeeArray.push (intern)
     confirmNext()
 
         })

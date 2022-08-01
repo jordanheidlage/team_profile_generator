@@ -49,7 +49,7 @@ function buildTeamHtml(team) {
     </div>`
   }
   const html = [];
-
+  console.log(team)
   html.push(team.filter((employee) => employee.getRole() === 'Manager').map((manager) => managerHtml(manager)))
 
   html.push(team.filter((employee) => employee.getRole() === 'Engineer').map((engineer) => engineerHtml(engineer)))
@@ -85,6 +85,7 @@ module.exports = (team) => {
   
             </div>
             </div>
+            
       </body>
       </html>
             `
