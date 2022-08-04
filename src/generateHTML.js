@@ -8,7 +8,7 @@ function buildTeamHtml(team) {
           <ul class="list-group">
             <li class="list-group-item">name: ${manager.getName()}</li>
             <li class="list-group-item">id:  ${manager.getId()}</li>
-            <li class="list-group-item">email: ${manager.getEmail()}</li>
+            <li class="list-group-item">email: <a href = "mailto: ${manager.email}">${manager.email}</a></li>
             <li class="list-group-item">OfficeNumber: ${manager.getofficeNumber()}</li>
              
           </ul>
@@ -24,7 +24,7 @@ function buildTeamHtml(team) {
           <ul class="list-group">
             <li class="list-group-item">name: ${engineer.getName()}</li>
             <li class="list-group-item">id:  ${engineer.getId()}</li>
-            <li class="list-group-item">email: ${engineer.getEmail()}</li>
+            <li class="list-group-item">email: <a href = "mailto: ${engineer.email}">${engineer.email}</a></li>
             <li class="list-group-item">github: ${engineer.getGithub()}</li>
              
           </ul>
@@ -40,7 +40,7 @@ function buildTeamHtml(team) {
           <ul class="list-group">
             <li class="list-group-item">name: ${intern.getName()}</li>
             <li class="list-group-item">id:  ${intern.getId()}</li>
-            <li class="list-group-item">email: ${intern.getEmail()}</li>
+            <li class="list-group-item">email: <a href = "mailto: ${intern.email}">${intern.email}</a></li>
             <li class="list-group-item">github: ${intern.getSchool()}</li>
              
           </ul>
