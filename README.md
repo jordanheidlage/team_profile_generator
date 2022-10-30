@@ -2,7 +2,7 @@
 
 ## Description
 
-This application allows the user to generate a website to display profiles for each of the employees on their team.
+This application utilizes node.js command-line applications to take in information about employees on an Engineering team, and generate an HTML webpage to display summaries for each of these people.
 
 ## Table of Contents
 
@@ -26,7 +26,8 @@ Use the "node index" command in your terminal, you'll be prompted with a series 
 
 ## Credits
 
-I created this myself, with the help of my instructional staff.
+- Jordan Heidlage (jheidlage6@gmail.com)
+- Instructional staff of The Ohio State University
 
 ## License
 
